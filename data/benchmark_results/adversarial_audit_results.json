@@ -1,0 +1,50 @@
+[
+  {
+    "total_needles_K": 2,
+    "anchor_capacity": 64,
+    "retained_needles": 2,
+    "retention_recall_pct": 100.0,
+    "retention_precision_pct": 1.61,
+    "total_cache_size": 128
+  },
+  {
+    "total_needles_K": 5,
+    "anchor_capacity": 64,
+    "retained_needles": 5,
+    "retention_recall_pct": 100.0,
+    "retention_precision_pct": 4.03,
+    "total_cache_size": 128
+  },
+  {
+    "total_needles_K": 10,
+    "anchor_capacity": 64,
+    "retained_needles": 10,
+    "retention_recall_pct": 100.0,
+    "retention_precision_pct": 8.06,
+    "total_cache_size": 128
+  },
+  {
+    "total_needles_K": 20,
+    "anchor_capacity": 64,
+    "retained_needles": 20,
+    "retention_recall_pct": 100.0,
+    "retention_precision_pct": 16.13,
+    "total_cache_size": 128
+  },
+  {
+    "total_needles_K": 40,
+    "anchor_capacity": 64,
+    "retained_needles": 40,
+    "retention_recall_pct": 100.0,
+    "retention_precision_pct": 32.26,
+    "total_cache_size": 128
+  },
+  {
+    "total_needles_K": 80,
+    "anchor_capacity": 64,
+    "retained_needles": 80,
+    "retention_recall_pct": 100.0,
+    "retention_precision_pct": 64.52,
+    "total_cache_size": 128
+  }
+]
