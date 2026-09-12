@@ -145,8 +145,8 @@
                 <th>Model</th>
                 <th>Needle Recall</th>
                 <th>Topic-Shift</th>
-                <th>Memory @ 64k</th>
-                <th>Latency</th>
+                <th>70B KV Memory (FP16)</th>
+                <th>Step Latency (Simulated)</th>
               </tr>
             </thead>
             <tbody>
@@ -154,7 +154,7 @@
                 <td><strong>Full KV (Reference)</strong></td>
                 <td><span class="pill pill-green">100.0%</span></td>
                 <td><span class="pill pill-green">100.0%</span></td>
-                <td>20,000 MB</td>
+                <td>20,000 MB (18.63 GiB)</td>
                 <td>220.87 ms</td>
               </tr>
               <tr>
@@ -182,7 +182,7 @@
                 <td><strong>SynapseCache (Ours)</strong></td>
                 <td><span class="pill pill-green font-bold">100.0%</span></td>
                 <td><span class="pill pill-green font-bold">100.0%</span></td>
-                <td><strong>4,000 MB (80% ↓)</strong></td>
+                <td><strong>4,000 MB (3.73 GiB, 80% &darr;)</strong></td>
                 <td><strong>36.17 ms (6.11x)</strong></td>
               </tr>
             </tbody>
@@ -196,7 +196,7 @@
 
   <footer class="footer">
     <div class="footer-content">
-      <span>SynapseCache (KV-Optic) · Research Systems Prototype · IEEE Manuscript &amp; Defensive Prior-Art Review</span>
+      <span>SynapseCache (KV-Optic) &bull; Research Systems Prototype &bull; IEEE Manuscript &amp; Defensive Prior-Art Review</span>
       <span>Engineered by <strong>Sahil Rajesh Warke</strong></span>
     </div>
   </footer>
