@@ -1,0 +1,411 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-13 02:53:22",
+    "sequence_lengths": [
+      2000,
+      4000,
+      8000,
+      16000
+    ],
+    "budget_ratios": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "models": [
+      "full_kv",
+      "sliding_window",
+      "streaming_llm",
+      "h2o",
+      "synapse"
+    ],
+    "seeds_per_config": 10,
+    "needle_distribution": "Uniform(0.05, 0.95)"
+  },
+  "sweep_data": [
+    {
+      "sequence_length": 2000,
+      "budget_ratio": 0.1,
+      "memory_reduction_pct": 90.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 10.0,
+          "successes": 1,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 10.0,
+          "successes": 1,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 2000,
+      "budget_ratio": 0.2,
+      "memory_reduction_pct": 80.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 2000,
+      "budget_ratio": 0.3,
+      "memory_reduction_pct": 70.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 4000,
+      "budget_ratio": 0.1,
+      "memory_reduction_pct": 90.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 10.0,
+          "successes": 1,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 10.0,
+          "successes": 1,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 4000,
+      "budget_ratio": 0.2,
+      "memory_reduction_pct": 80.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 4000,
+      "budget_ratio": 0.3,
+      "memory_reduction_pct": 70.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 40.0,
+          "successes": 4,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 40.0,
+          "successes": 4,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 8000,
+      "budget_ratio": 0.1,
+      "memory_reduction_pct": 90.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 10.0,
+          "successes": 1,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 10.0,
+          "successes": 1,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 8000,
+      "budget_ratio": 0.2,
+      "memory_reduction_pct": 80.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 8000,
+      "budget_ratio": 0.3,
+      "memory_reduction_pct": 70.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 16000,
+      "budget_ratio": 0.1,
+      "memory_reduction_pct": 90.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 16000,
+      "budget_ratio": 0.2,
+      "memory_reduction_pct": 80.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    },
+    {
+      "sequence_length": 16000,
+      "budget_ratio": 0.3,
+      "memory_reduction_pct": 70.0,
+      "model_recalls": {
+        "full_kv": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "sliding_window": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "streaming_llm": {
+          "recall_pct": 30.0,
+          "successes": 3,
+          "total": 10
+        },
+        "h2o": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        },
+        "synapse": {
+          "recall_pct": 100.0,
+          "successes": 10,
+          "total": 10
+        }
+      }
+    }
+  ]
+}

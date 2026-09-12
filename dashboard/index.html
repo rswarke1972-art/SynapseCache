@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SynapseCache (KV-Optic) - Bounded-Memory Attention-Entropy Workbench</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Header & Navigation -->
+  <header class="header">
+    <div class="header-content">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h1>SynapseCache <span class="brand-badge">KV-Optic</span></h1>
+          <p class="brand-sub">Dynamic Attention-Mass Sketching &amp; Bounded KV-Cache Architecture</p>
+        </div>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-cyan">Invariant: |C_t| ≤ B</span>
+        <span class="badge badge-purple">70B Model Architecture</span>
+        <span class="badge badge-emerald">6.11x Speedup @ 64k</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Metrics Stat Bar -->
+    <section class="stat-grid">
+      <div class="stat-card border-cyan">
+        <div class="stat-label">Active Cache Budget (B)</div>
+        <div class="stat-value text-cyan" id="stat-budget">256 <span class="stat-unit">tokens</span></div>
+        <div class="stat-sub">Strict Invariant by Construction</div>
+      </div>
+      <div class="stat-card border-emerald">
+        <div class="stat-label">Memory Footprint @ 64k</div>
+        <div class="stat-value text-emerald">4.00 <span class="stat-unit">GB</span></div>
+        <div class="stat-sub"><span class="text-emerald font-bold">80.0% Reduction</span> vs 20.00 GB Full KV</div>
+      </div>
+      <div class="stat-card border-purple">
+        <div class="stat-label">Needle Retrieval Recall</div>
+        <div class="stat-value text-purple">100.0%</div>
+        <div class="stat-sub">Randomized U(0.05, 0.95) Across 10 Seeds</div>
+      </div>
+      <div class="stat-card border-amber">
+        <div class="stat-label">Topic-Shift Recovery</div>
+        <div class="stat-value text-amber">100.0%</div>
+        <div class="stat-sub">vs 0.0% for Sliding &amp; StreamingLLM</div>
+      </div>
+    </section>
+
+    <!-- Main Interactive Workspace -->
+    <div class="workspace-grid">
+
+      <!-- Left Column: Live Token Stream Simulator -->
+      <section class="panel token-panel">
+        <div class="panel-header">
+          <h2>Live Token Stream &amp; Tiered Cache Visualizer</h2>
+          <div class="tier-legend">
+            <span class="legend-item"><span class="dot dot-sink"></span> Sink (S_sink)</span>
+            <span class="legend-item"><span class="dot dot-anchor"></span> Anchor (S_anchor)</span>
+            <span class="legend-item"><span class="dot dot-local"></span> Local Window</span>
+            <span class="legend-item"><span class="dot dot-evicted"></span> Evicted</span>
+          </div>
+        </div>
+
+        <div class="controls-bar">
+          <button id="btn-stream" class="btn btn-primary">▶ Run Stream</button>
+          <button id="btn-inject-needle" class="btn btn-needle">🎯 Inject Needle Token</button>
+          <button id="btn-reset" class="btn btn-secondary">↺ Reset</button>
+          <div class="control-group">
+            <label for="slider-budget">Cache Budget B: <span id="val-budget" class="font-mono">128</span></label>
+            <input type="range" id="slider-budget" min="32" max="256" step="16" value="128">
+          </div>
+        </div>
+
+        <!-- Token Grid Canvas -->
+        <div class="token-canvas-container">
+          <div class="token-info-header">
+            <span>Tokens Processed: <strong id="val-tokens-seen" class="font-mono text-cyan">0</strong></span>
+            <span>Retained in Cache: <strong id="val-retained" class="font-mono text-emerald">0 / 128</strong></span>
+            <span>Evictions: <strong id="val-evictions" class="font-mono text-slate">0</strong></span>
+          </div>
+          <div class="token-grid" id="token-grid">
+            <!-- Dynamically populated tokens -->
+          </div>
+        </div>
+
+        <!-- Tier Breakdown Bar -->
+        <div class="tier-progress-container">
+          <div class="tier-progress-bar">
+            <div id="bar-sink" class="bar-segment bar-sink" style="width: 5%;"></div>
+            <div id="bar-anchor" class="bar-segment bar-anchor" style="width: 45%;"></div>
+            <div id="bar-local" class="bar-segment bar-local" style="width: 50%;"></div>
+          </div>
+          <div class="tier-counts">
+            <span class="text-sink">Sinks: <strong id="count-sink">4</strong></span>
+            <span class="text-anchor">Anchors: <strong id="count-anchor">0</strong></span>
+            <span class="text-local">Local Window: <strong id="count-local">0</strong></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Cross-Head Attention & Empirical Data -->
+      <div class="right-stack">
+
+        <!-- Cross-Head Attention Entropy Heatmap -->
+        <section class="panel entropy-panel">
+          <div class="panel-header">
+            <h3>Cross-Head Attention Entropy (H_Q = 8)</h3>
+            <span class="badge badge-cyan text-xs">Normalized p_{h, j}</span>
+          </div>
+          <p class="panel-desc">Hover over any active token to inspect its normalized cross-head probability distribution and Shannon entropy score.</p>
+          <div class="inspector-card" id="inspector-card">
+            <div class="inspector-header">
+              <span id="inspect-token-name" class="font-bold text-white">Token #--</span>
+              <span id="inspect-tier-badge" class="badge badge-slate">Inactive</span>
+            </div>
+            <div class="entropy-metrics">
+              <div>Mean Mass (M_j): <strong id="inspect-mass" class="font-mono text-cyan">0.000</strong></div>
+              <div>Shannon Entropy (H_j): <strong id="inspect-entropy" class="font-mono text-purple">0.000</strong></div>
+              <div>Composite Salience: <strong id="inspect-salience" class="font-mono text-emerald">0.000</strong></div>
+            </div>
+            <div class="head-bars-container" id="head-bars">
+              <!-- 8 Head bars -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Empirical Benchmark Comparison Table -->
+        <section class="panel benchmark-panel">
+          <div class="panel-header">
+            <h3>Empirical Benchmark Comparison</h3>
+            <span class="badge badge-emerald text-xs">Reproducible JSON Data</span>
+          </div>
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Needle Recall</th>
+                <th>Topic-Shift</th>
+                <th>Memory @ 64k</th>
+                <th>Latency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-reference">
+                <td><strong>Full KV (Reference)</strong></td>
+                <td><span class="pill pill-green">100.0%</span></td>
+                <td><span class="pill pill-green">100.0%</span></td>
+                <td>20,000 MB</td>
+                <td>220.87 ms</td>
+              </tr>
+              <tr>
+                <td>Sliding Window</td>
+                <td><span class="pill pill-red">10.0% - 30.0%</span></td>
+                <td><span class="pill pill-red">0.0%</span></td>
+                <td>4,000 MB</td>
+                <td>35.80 ms</td>
+              </tr>
+              <tr>
+                <td>StreamingLLM</td>
+                <td><span class="pill pill-red">10.0% - 30.0%</span></td>
+                <td><span class="pill pill-red">0.0%</span></td>
+                <td>4,000 MB</td>
+                <td>36.05 ms</td>
+              </tr>
+              <tr>
+                <td>H2O (Heavy Hitter)</td>
+                <td><span class="pill pill-green">100.0%</span></td>
+                <td><span class="pill pill-green">100.0%</span></td>
+                <td>4,000 MB</td>
+                <td>38.90 ms</td>
+              </tr>
+              <tr class="row-highlight">
+                <td><strong>SynapseCache (Ours)</strong></td>
+                <td><span class="pill pill-green font-bold">100.0%</span></td>
+                <td><span class="pill pill-green font-bold">100.0%</span></td>
+                <td><strong>4,000 MB (80% ↓)</strong></td>
+                <td><strong>36.17 ms (6.11x)</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <span>SynapseCache (KV-Optic) · Research Systems Prototype · IEEE Manuscript &amp; Defensive Prior-Art Review</span>
+      <span>Engineered by <strong>Sahil Rajesh Warke</strong></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-13 02:58:23",
+    "num_trials": 10,
+    "models": [
+      "full_kv",
+      "sliding_window",
+      "streaming_llm",
+      "h2o",
+      "synapse"
+    ]
+  },
+  "topic_shift_data": [
+    {
+      "total_tokens": 3000,
+      "topic_partition": [
+        1000,
+        1000,
+        1000
+      ],
+      "cache_budget": 300,
+      "memory_reduction_pct": 90.0,
+      "topic_a_recovery_rate": {
+        "full_kv": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        },
+        "sliding_window": {
+          "recovery_pct": 0.0,
+          "recovered_facts": 0,
+          "total_facts": 50
+        },
+        "streaming_llm": {
+          "recovery_pct": 0.0,
+          "recovered_facts": 0,
+          "total_facts": 50
+        },
+        "h2o": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        },
+        "synapse": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        }
+      }
+    },
+    {
+      "total_tokens": 6000,
+      "topic_partition": [
+        2000,
+        2000,
+        2000
+      ],
+      "cache_budget": 600,
+      "memory_reduction_pct": 90.0,
+      "topic_a_recovery_rate": {
+        "full_kv": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        },
+        "sliding_window": {
+          "recovery_pct": 0.0,
+          "recovered_facts": 0,
+          "total_facts": 50
+        },
+        "streaming_llm": {
+          "recovery_pct": 0.0,
+          "recovered_facts": 0,
+          "total_facts": 50
+        },
+        "h2o": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        },
+        "synapse": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        }
+      }
+    },
+    {
+      "total_tokens": 12000,
+      "topic_partition": [
+        4000,
+        4000,
+        4000
+      ],
+      "cache_budget": 1200,
+      "memory_reduction_pct": 90.0,
+      "topic_a_recovery_rate": {
+        "full_kv": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        },
+        "sliding_window": {
+          "recovery_pct": 0.0,
+          "recovered_facts": 0,
+          "total_facts": 50
+        },
+        "streaming_llm": {
+          "recovery_pct": 0.0,
+          "recovered_facts": 0,
+          "total_facts": 50
+        },
+        "h2o": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        },
+        "synapse": {
+          "recovery_pct": 100.0,
+          "recovered_facts": 50,
+          "total_facts": 50
+        }
+      }
+    }
+  ]
+}
