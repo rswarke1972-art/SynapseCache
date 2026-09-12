@@ -1,0 +1,482 @@
+{
+  "metadata": {
+    "title": "SynapseCache Deep Scientific Audit v2: H2O Competing Distractors & Weak-Signal Sensitivity",
+    "author": "Sahil Rajesh Warke",
+    "date": "2026-09-13",
+    "framework": "SynapseCache Tiered Engine"
+  },
+  "h2o_competing_sweep": [
+    {
+      "intervening_tokens_D": 1000,
+      "total_tokens": 1250,
+      "cache_budget_B": 256,
+      "compression_pct": 79.5,
+      "synapse_retention_pct": 100.0,
+      "h2o_retention_pct": 100.0,
+      "sliding_retention_pct": 0.0,
+      "streaming_retention_pct": 0.0
+    },
+    {
+      "intervening_tokens_D": 2000,
+      "total_tokens": 2250,
+      "cache_budget_B": 256,
+      "compression_pct": 88.6,
+      "synapse_retention_pct": 100.0,
+      "h2o_retention_pct": 100.0,
+      "sliding_retention_pct": 0.0,
+      "streaming_retention_pct": 0.0
+    },
+    {
+      "intervening_tokens_D": 4000,
+      "total_tokens": 4250,
+      "cache_budget_B": 256,
+      "compression_pct": 94.0,
+      "synapse_retention_pct": 100.0,
+      "h2o_retention_pct": 100.0,
+      "sliding_retention_pct": 0.0,
+      "streaming_retention_pct": 0.0
+    },
+    {
+      "intervening_tokens_D": 8000,
+      "total_tokens": 8250,
+      "cache_budget_B": 256,
+      "compression_pct": 96.9,
+      "synapse_retention_pct": 100.0,
+      "h2o_retention_pct": 0.0,
+      "sliding_retention_pct": 0.0,
+      "streaming_retention_pct": 0.0
+    },
+    {
+      "intervening_tokens_D": 16000,
+      "total_tokens": 16250,
+      "cache_budget_B": 256,
+      "compression_pct": 98.4,
+      "synapse_retention_pct": 100.0,
+      "h2o_retention_pct": 0.0,
+      "sliding_retention_pct": 0.0,
+      "streaming_retention_pct": 0.0
+    },
+    {
+      "intervening_tokens_D": 32000,
+      "total_tokens": 32250,
+      "cache_budget_B": 256,
+      "compression_pct": 99.2,
+      "synapse_retention_pct": 100.0,
+      "h2o_retention_pct": 0.0,
+      "sliding_retention_pct": 0.0,
+      "streaming_retention_pct": 0.0
+    }
+  ],
+  "weak_signal_sensitivity_curve": [
+    {
+      "delta": 0.0,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 452.0
+    },
+    {
+      "delta": 0.0,
+      "heads_agreeing": 2,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 452.0
+    },
+    {
+      "delta": 0.0,
+      "heads_agreeing": 4,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 452.0
+    },
+    {
+      "delta": 0.0,
+      "heads_agreeing": 8,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 452.0
+    },
+    {
+      "delta": 0.005,
+      "heads_agreeing": 1,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.005,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.005,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.005,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.01,
+      "heads_agreeing": 1,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.01,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.01,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.01,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.02,
+      "heads_agreeing": 1,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.02,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.02,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.02,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.05,
+      "heads_agreeing": 1,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.05,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.05,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.05,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.1,
+      "heads_agreeing": 1,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.1,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.1,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.1,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.2,
+      "heads_agreeing": 1,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.2,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.2,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.2,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.35,
+      "heads_agreeing": 1,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.35,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.35,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    },
+    {
+      "delta": 0.35,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 2000.0
+    }
+  ],
+  "calibrated_activation_retention_curve": [
+    {
+      "delta": 0.0,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.0,
+      "heads_agreeing": 2,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.0,
+      "heads_agreeing": 4,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.0,
+      "heads_agreeing": 8,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.002,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.002,
+      "heads_agreeing": 2,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.002,
+      "heads_agreeing": 4,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.002,
+      "heads_agreeing": 8,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.005,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.005,
+      "heads_agreeing": 2,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.005,
+      "heads_agreeing": 4,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.005,
+      "heads_agreeing": 8,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.01,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.01,
+      "heads_agreeing": 2,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.01,
+      "heads_agreeing": 4,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.01,
+      "heads_agreeing": 8,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.02,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.02,
+      "heads_agreeing": 2,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.02,
+      "heads_agreeing": 4,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.02,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.04,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.04,
+      "heads_agreeing": 2,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.04,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.04,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.08,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 232.0
+    },
+    {
+      "delta": 0.08,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.08,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.08,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.15,
+      "heads_agreeing": 1,
+      "p_retention_pct": 0.0,
+      "mean_survival_step": 780.5
+    },
+    {
+      "delta": 0.15,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.15,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.15,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.25,
+      "heads_agreeing": 1,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.25,
+      "heads_agreeing": 2,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.25,
+      "heads_agreeing": 4,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    },
+    {
+      "delta": 0.25,
+      "heads_agreeing": 8,
+      "p_retention_pct": 100.0,
+      "mean_survival_step": 1500.0
+    }
+  ]
+}
